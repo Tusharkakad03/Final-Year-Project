@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% block title %}LogIn{% endblock title %}
+{% block body %}
+<!-- login section start -->
+<div class="contact_section">
+    <div class="container">
+        <div class="contact_section">
+            <div class="row col-mg-12">
+                <div class="col-md-6 mt-5">
+                    <div class="image_1"><img src="static/images/pre1.jpg"></div>
+                </div>
+                <div class="col-md-6 mt-5">
+                    <div class="mail_section">
+                        <div class="text-center">
+                            <img src="static/images/farmer_icon.png" style="width: 85px;" alt="logo">
+                        </div>
+                        <h2><b> Log In </b></h2>
+                        <form action="" method="POST">
+                            {% csrf_token %}
+                            <div class="form-outline mb-4">
+                                <label class="form-label" for="username"><b>Username</b></label>
+                                <input type="email" name="username" id="username" class="form-control"
+                                    placeholder="Enter email address">
+                            </div>
+
+                            <div class="form-outline mb-4">
+                                <label class="form-label" for="password"><b>Password</b></label>
+                                <input type="password" name="password" id="password" class="form-control" />
+
+                            </div>
+
+                            <div class="text-center pt-1 mb-2">
+                                <button type="submit" class="btn btn-success">Log In</button>
+                            </div>
+
+                            <div class="d-flex align-items-center justify-content-center pb-4">
+                                <p class="mb-0 me-2">Don't have an account? <a href="register">Register</a></p>
+                                
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<!-- login section end -->
+{% endblock body %}
